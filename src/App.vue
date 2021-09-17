@@ -1,30 +1,43 @@
 <template>
-  <div id="nav">
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
+  <div class="app">
+    <search-user></search-user>
+    <tank-list :posts="posts"></tank-list>
   </div>
-  <router-view/>
 </template>
 
-<style lang="scss">
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
+<script>
+import SearchUser from "@/components/SearchUser.vue";
+import TankList from "@/components/TankList.vue";
+export default {
+  data: () => ({
+    posts: [
+      { id: 1, name: "test", content: "статистика" },
+      { id: 2, name: "test 2", content: "статистика 2" },
+    ],
+  }),
+  components: {
+    SearchUser,
+    TankList,
+  },
+};
+</script>
+
+<style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
-
-#nav {
+input {
+  width: 100%;
+  height: 50px;
+  border: 0px;
+  outline: none;
+  border-bottom: 1px solid #cacaca;
+  padding: 0px 15px;
+  margin: 15px 0px;
+}
+.app {
   padding: 30px;
-
-  a {
-    font-weight: bold;
-    color: #2c3e50;
-
-    &.router-link-exact-active {
-      color: #42b983;
-    }
-  }
 }
 </style>
