@@ -1,21 +1,16 @@
 <template>
-    <search-user></search-user>
-    <!--tank-list :posts="posts"></!--tank-list-->
+  <header-page/>
+  <router-view/>
+  <footer-page/>
 </template>
 
 <script>
-import SearchUser from "@/components/SearchUser.vue";
-import TankList from "@/components/TankList.vue";
+import HeaderPage from '@/components/HeaderPage.vue';
+import FooterPage from '@/components/FooterPage.vue';
 export default {
-  data: () => ({
-    posts: [
-      { id: 1, name: "test", content: "статистика" },
-      { id: 2, name: "test 2", content: "статистика 2" },
-    ],
-  }),
   components: {
-    SearchUser,
-    TankList,
+    HeaderPage,
+    FooterPage,
   },
 };
 </script>
@@ -24,7 +19,6 @@ export default {
 * {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
   font-family: 'Montserrat', sans-serif;
 }
 </style>

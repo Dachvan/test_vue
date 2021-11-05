@@ -1,0 +1,32 @@
+.header{
+  background-color: #e9ecef;
+  &__wrapper{
+    padding: 15px 0px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+  }
+  &__logo{
+    display: flex;
+    align-items: center;
+    margin-right: 30px;
+  }
+  &__menu{
+    display: flex;
+    align-items: center;
+    flex-grow: 1;
+  }
+  &__button{
+    max-width: 150px;
+    height: 45px;
+    background: $colorPurple500;
+    color: #ffffff;
+    &:hover{
+      background: $colorPurple600;
+      color: #ffffff;
+    }
+    i{
+      margin-right: 10px;
+    }
+  }
+}

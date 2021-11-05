@@ -1,0 +1,18 @@
+$colorBlack: #212529;
+$colorPurple500: #6f42c1;
+$colorPurple600: #59359a;
+
+.btn{
+  cursor: pointer;
+  text-decoration: none;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-size: 16px;
+  font-weight: 400;
+  transition: 0.3s ease-in-out;
+  border-radius: 6px;
+  border: 0px;
+}
